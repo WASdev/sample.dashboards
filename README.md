@@ -1,2 +1,4 @@
-# sample.dashboards
-Sample dashboards for Liberty for logging and monitoring.
+# Sample dashboards for Liberty
+This repository contains sample dashboards for monitoring Liberty in the following products:
+
+- [IBM Cloud Private](./IBMCloudPrivate)
