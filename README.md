@@ -1,4 +1,2 @@
 # Sample dashboards for Liberty
-This repository contains sample dashboards for monitoring Liberty in the following products:
-
-- [IBM Cloud Private version 2.1.0.2](./IBMCloudPrivate_2.1.0.2)
+This repository is deprecated.  Please use the dashboards supplied in the WebSphere Liberty and Open Liberty Helm charts.
