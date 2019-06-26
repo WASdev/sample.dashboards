@@ -1,0 +1,11 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /logs/messages.log
+
+inputs:
+- add_cloud_metadata:
+
+output.logstash:
+ hosts: ["logstash:5043"]
