@@ -19,7 +19,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Liberty Audit JMS",
-      "visState": "{\"title\":\"Liberty Audit JMS\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable JMS messaging authentication and authorization events. Configure the liberty audit feature in your Liberty server.xml file and configure the logstashCollector feature to use the audit source.  Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Liberty Audit JMS\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable JMS messaging authentication and authorization events. Configure the Liberty server to use Liberty audit feature and JSON logging with the audit source.\\n Click on host, user directory or server name to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -225,8 +225,8 @@
     "_id": "AWWvo_tzwC3Eko_hdKqI",
     "_type": "visualization",
     "_source": {
-      "title": "Liberty Hosts Table (JMS)",
-      "visState": "{\"title\":\"Liberty Hosts Table (JMS)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "title": "Liberty Hosts (JMS)",
+      "visState": "{\"title\":\"Liberty Hosts (JMS)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
       "description": "",
       "savedSearchId": "liberty_all",
@@ -330,8 +330,8 @@
     "_id": "AWWv3jxkwC3Eko_hdLTO",
     "_type": "visualization",
     "_source": {
-      "title": "Liberty Hosts Table (JMX)",
-      "visState": "{\"title\":\"Liberty Hosts Table (JMX)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "title": "Liberty Hosts (JMX)",
+      "visState": "{\"title\":\"Liberty Hosts (JMX)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
       "description": "",
       "savedSearchId": "liberty_all",
@@ -415,7 +415,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Liberty Audit AUTHN/AUTHZ",
-      "visState": "{\"title\":\"Liberty Audit AUTHN/AUTHZ\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable security authentication and authorization events. Configure the liberty audit feature in your Liberty server.xml file and configure the logstashCollector feature to use the audit source.  Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Liberty Audit AUTHN/AUTHZ\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable security authentication and authorization events. Configure the Liberty server to use Liberty audit feature and JSON logging with the audit source.\\n Click on host, user directory or server name to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -435,7 +435,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Liberty Audit JMX",
-      "visState": "{\"title\":\"Liberty Audit JMX\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable JMX MBean and JMX Notification events. Configure the liberty audit feature in your Liberty server.xml file and configure the logstashCollector feature to use the audit source.  Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Liberty Audit JMX\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable JMX MBean and JMX Notification events. Configure the Liberty server to use Liberty audit feature and JSON logging with the audit source.\\n Click on host, user directory or server name to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -455,7 +455,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Liberty Audit SECURITY_MEMBER_MGMT",
-      "visState": "{\"title\":\"Liberty Audit SECURITY_MEMBER_MGMT\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable security member management events. Configure the liberty audit feature in your Liberty server.xml file and configure the logstashCollector feature to use the audit source.  Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Liberty Audit SECURITY_MEMBER_MGMT\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable security member management events. Configure the Liberty server to use Liberty audit feature and JSON logging with the audit source.\\n Click on host, user directory or server name to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -495,7 +495,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Liberty Audit Dashboard",
-      "visState": "{\"title\":\"Liberty Audit Dashboard\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable events.  Configure the liberty audit feature in your Liberty server.xml file and configure the logstashCollector feature to use the audit source.  Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Liberty Audit Dashboard\",\"type\":\"markdown\",\"params\":{\"type\":\"markdown\",\"markdown\":\"Dashboard visualizes auditable events. Configure the Liberty server to use Liberty audit feature and JSON logging with the audit source.\\n Click on host, user directory or server name to filter the content shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -908,8 +908,8 @@
     "_id": "AWW1IkOQwC3Eko_hdbPm",
     "_type": "visualization",
     "_source": {
-      "title": "Liberty Hosts Table (SECURITY_MEMBER_MGMT)",
-      "visState": "{\"title\":\"Liberty Hosts Table (SECURITY_MEMBER_MGMT)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "title": "Liberty Hosts (SECURITY_MEMBER_MGMT)",
+      "visState": "{\"title\":\"Liberty Hosts (SECURITY_MEMBER_MGMT)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
       "description": "",
       "savedSearchId": "liberty_all",
@@ -950,8 +950,8 @@
     "_id": "AWWvkXy3wC3Eko_hdJqQ",
     "_type": "visualization",
     "_source": {
-      "title": "Liberty Hosts Table (AUTHN/AUTHZ)",
-      "visState": "{\"title\":\"Liberty Hosts Table (AUTHN/AUTHZ)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "title": "Liberty Hosts (AUTHN/AUTHZ)",
+      "visState": "{\"title\":\"Liberty Hosts (AUTHN/AUTHZ)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
       "description": "",
       "savedSearchId": "liberty_all",
@@ -992,8 +992,8 @@
     "_id": "AWWvh82DwC3Eko_hdJWf",
     "_type": "visualization",
     "_source": {
-      "title": "Liberty Hosts Table (Audit)",
-      "visState": "{\"title\":\"Liberty Hosts Table (Audit)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "title": "Liberty Hosts (Audit)",
+      "visState": "{\"title\":\"Liberty Hosts (Audit)\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"type\":\"table\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
       "description": "",
       "savedSearchId": "liberty_all",
@@ -1010,10 +1010,10 @@
     }
   },
   {
-    "_id": "Liberty-Audit-AUTHN-AUTHZ-K6_7-20190606",
+    "_id": "Liberty-Audit-AUTHN-AUTHZ-K6_7-20191108",
     "_type": "dashboard",
     "_source": {
-      "title": "Liberty-Audit-AUTHN-AUTHZ-K6_7-20190606",
+      "title": "Liberty-Audit-AUTHN-AUTHZ-K6_7-20191108",
       "hits": 0,
       "description": "",
       "panelsJSON": "[{\"id\":\"AWWQjfOr9D2Mc8V9L8Y6\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":15,\"i\":\"6\"},\"version\":\"6.8.0\"},{\"id\":\"AWWQ6mSx9D2Mc8V9L_9z\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":5,\"i\":\"9\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvkXy3wC3Eko_hdJqQ\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":16,\"h\":15,\"i\":\"12\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvlkREwC3Eko_hdJ0S\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":32,\"y\":5,\"w\":16,\"h\":15,\"i\":\"13\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvlXVYwC3Eko_hdJyZ\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":16,\"y\":5,\"w\":16,\"h\":15,\"i\":\"15\"},\"version\":\"6.8.0\"},{\"id\":\"AWWv8X9MwC3Eko_hdL7A\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"colors\":{\"Failure/Denied\":\"#BF1B00\",\"Success\":\"#629E51\"}}},\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":15,\"i\":\"16\"},\"version\":\"6.8.0\"},{\"id\":\"AWWQjMM79D2Mc8V9L8Yi\",\"panelIndex\":\"17\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_outcome\",\"ibm_audit_target.credential.token\",\"ibm_audit_target.appname\",\"ibm_audit_target.session\",\"ibm_audit_initiator.host.address\",\"ibm_audit_target.role.names\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":35,\"w\":48,\"h\":30,\"i\":\"17\"},\"version\":\"6.8.0\"}]",
@@ -1029,10 +1029,10 @@
     }
   },
   {
-    "_id": "Liberty-Audit-JMS-K6_7-20190606",
+    "_id": "Liberty-Audit-JMS-K6_7-20191108",
     "_type": "dashboard",
     "_source": {
-      "title": "Liberty-Audit-JMS-K6_7-20190606",
+      "title": "Liberty-Audit-JMS-K6_7-20191108",
       "hits": 0,
       "description": "",
       "panelsJSON": "[{\"id\":\"AWWlChc69D2Mc8V9MBxP\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":5,\"i\":\"1\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvWO4YwC3Eko_hdHNA\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"colors\":{\"Failure/Denied\":\"#E24D42\",\"Success\":\"#629E51\"}}},\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":15,\"i\":\"11\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvo_tzwC3Eko_hdKqI\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":16,\"h\":15,\"i\":\"14\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvpLxawC3Eko_hdKrs\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":16,\"y\":5,\"w\":16,\"h\":15,\"i\":\"15\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvpRM1wC3Eko_hdKsX\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":32,\"y\":5,\"w\":16,\"h\":15,\"i\":\"16\"},\"version\":\"6.8.0\"},{\"id\":\"AWXEdMrLwC3Eko_hds7L\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":15,\"i\":\"21\"},\"version\":\"6.8.0\"},{\"id\":\"AWXEd9cMwC3Eko_hdtEk\",\"panelIndex\":\"22\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_outcome\",\"ibm_audit_target.credential.token\",\"ibm_audit_target.messaging.callType\",\"ibm_audit_target.messaging.remote.chainName\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":35,\"w\":48,\"h\":20,\"i\":\"22\"},\"version\":\"6.8.0\"},{\"id\":\"AWXEeNT1wC3Eko_hdtHa\",\"panelIndex\":\"23\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_outcome\",\"ibm_audit_target.credential.token\",\"ibm_audit_target.messaging.operationType\",\"ibm_audit_target.messaging.destination\",\"ibm_audit_target.messaging.jmsActions\",\"ibm_audit_target.messaging.jmsResource\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":55,\"w\":48,\"h\":20,\"i\":\"23\"},\"version\":\"6.8.0\"}]",
@@ -1048,10 +1048,10 @@
     }
   },
   {
-    "_id": "Liberty-Audit-JMX-K6_7-20190606",
+    "_id": "Liberty-Audit-JMX-K6_7-20191108",
     "_type": "dashboard",
     "_source": {
-      "title": "Liberty-Audit-JMX-K6_7-20190606",
+      "title": "Liberty-Audit-JMX-K6_7-20191108",
       "hits": 0,
       "description": "",
       "panelsJSON": "[{\"id\":\"AWWQ7Ib09D2Mc8V9L_-e\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":5,\"i\":\"1\"},\"version\":\"6.8.0\"},{\"id\":\"AWWQ7i-R9D2Mc8V9L__A\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":15,\"i\":\"6\"},\"version\":\"6.8.0\"},{\"id\":\"AWWv3jxkwC3Eko_hdLTO\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":16,\"h\":15,\"i\":\"10\"},\"version\":\"6.8.0\"},{\"id\":\"AWWv3xZVwC3Eko_hdLVH\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":16,\"y\":5,\"w\":16,\"h\":15,\"i\":\"11\"},\"version\":\"6.8.0\"},{\"id\":\"AWWv364UwC3Eko_hdLWX\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":32,\"y\":5,\"w\":16,\"h\":15,\"i\":\"12\"},\"version\":\"6.8.0\"},{\"id\":\"AWWv8nW3wC3Eko_hdL85\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"colors\":{\"Failure/Denied\":\"#BF1B00\",\"Success\":\"#629E51\"}}},\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":15,\"i\":\"14\"},\"version\":\"6.8.0\"},{\"id\":\"AWXEp7FbwC3Eko_hdvX1\",\"panelIndex\":\"15\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_target.jmx.mbean.name\",\"ibm_audit_outcome\",\"ibm_audit_target.jmx.mbean.action\",\"ibm_audit_target.jmx.mbean.attribute.name\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":35,\"w\":48,\"h\":25,\"i\":\"15\"},\"version\":\"6.8.0\"},{\"id\":\"AWXEpOcswC3Eko_hdvPX\",\"panelIndex\":\"16\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_target.jmx.mbean.action\",\"ibm_audit_outcome\",\"ibm_audit_target.jmx.notification.name\",\"ibm_audit_target.jmx.notification.listener\",\"ibm_audit_target.jmx.notification.filter\",\"ibm_audit_target.jmx.notification.handback\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":60,\"w\":48,\"h\":30,\"i\":\"16\"},\"version\":\"6.8.0\"}]",
@@ -1067,10 +1067,10 @@
     }
   },
   {
-    "_id": "ALiberty-Audit-K6_7-20190606",
+    "_id": "ALiberty-Audit-K6_7-20191108",
     "_type": "dashboard",
     "_source": {
-      "title": "Liberty-Audit-K6_7-20190606",
+      "title": "Liberty-Audit-K6_7-20191108",
       "hits": 0,
       "description": "",
       "panelsJSON": "[{\"id\":\"AWWM33px9D2Mc8V9L7gV\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":15,\"i\":\"1\"},\"version\":\"6.8.0\"},{\"id\":\"AWWM4xzJ9D2Mc8V9L7hf\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":35,\"w\":48,\"h\":15,\"i\":\"2\"},\"version\":\"6.8.0\"},{\"id\":\"AWWM5Z9q9D2Mc8V9L7iR\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":15,\"i\":\"3\"},\"version\":\"6.8.0\"},{\"id\":\"AWWQKkVm9D2Mc8V9L72R\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":5,\"i\":\"6\"},\"version\":\"6.8.0\"},{\"id\":\"AWWvh82DwC3Eko_hdJWf\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":16,\"h\":15,\"i\":\"11\"},\"version\":\"6.8.0\"},{\"id\":\"AWWviH0nwC3Eko_hdJXw\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":16,\"y\":5,\"w\":16,\"h\":15,\"i\":\"12\"},\"version\":\"6.8.0\"},{\"id\":\"AWWviNl5wC3Eko_hdJYt\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":32,\"y\":5,\"w\":16,\"h\":15,\"i\":\"14\"},\"version\":\"6.8.0\"},{\"id\":\"AWWM6M0L9D2Mc8V9L7jR\",\"panelIndex\":\"15\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_outcome\",\"ibm_audit_target.credential.token\",\"ibm_audit_initiator.host.address\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":50,\"w\":48,\"h\":25,\"i\":\"15\"},\"version\":\"6.8.0\"}]",
@@ -1086,10 +1086,10 @@
     }
   },
   {
-    "_id": "Liberty-Audit-SECURITY_MEMBER_MGMT-K6_7-20190606",
+    "_id": "Liberty-Audit-SECURITY_MEMBER_MGMT-K6_7-20191108",
     "_type": "dashboard",
     "_source": {
-      "title": "Liberty-Audit-SECURITY_MEMBER_MGMT-K6_7-20190606",
+      "title": "Liberty-Audit-SECURITY_MEMBER_MGMT-K6_7-20191108",
       "hits": 0,
       "description": "",
       "panelsJSON": "[{\"id\":\"AWW1I85vwC3Eko_hdbTk\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":5,\"i\":\"1\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1IkOQwC3Eko_hdbPm\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":16,\"h\":15,\"i\":\"2\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1IrVuwC3Eko_hdbQy\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":16,\"y\":5,\"w\":16,\"h\":15,\"i\":\"3\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1IvH2wC3Eko_hdbRM\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":32,\"y\":5,\"w\":16,\"h\":15,\"i\":\"4\"},\"version\":\"6.8.0\"},{\"id\":\"AWWM7Dk19D2Mc8V9L7kV\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"colors\":{\"Count\":\"#BA43A9\"}}},\"gridData\":{\"x\":0,\"y\":40,\"w\":24,\"h\":15,\"i\":\"6\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1KkPTwC3Eko_hdbtQ\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":20,\"i\":\"7\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1MGxjwC3Eko_hdcGM\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":20,\"i\":\"9\"},\"version\":\"6.8.0\"},{\"id\":\"AWXE1WU6wC3Eko_hdw7x\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"embeddableConfig\":{\"vis\":{\"colors\":{\"Failure/Denied\":\"#BF1B00\",\"Success\":\"#508642\",\"cn=group1,o=ibm,c=us\":\"#FCEACA\",\"cn=group2,o=ibm,c=usa\":\"#3F6833\",\"service/vmmservice/create\":\"#0A437C\",\"service/vmmservice/get\":\"#BADFF4\",\"service/vmmservice/update\":\"#1F78C1\",\"uid=user1,o=ibm,c=us\":\"#7EB26D\",\"uid=user2,o=ibm,c=us\":\"#E0F9D7\",\"uid=user2,o=ibm,c=usa\":\"#E5AC0E\"}}},\"gridData\":{\"x\":24,\"y\":40,\"w\":24,\"h\":15,\"i\":\"10\"},\"version\":\"6.8.0\"},{\"id\":\"AWW1IU4UwC3Eko_hdbF6\",\"panelIndex\":\"11\",\"type\":\"search\",\"embeddableConfig\":{\"columns\":[\"ibm_audit_eventName\",\"ibm_audit_outcome\",\"ibm_audit_target.typeURI\",\"ibm_audit_target.uniqueName\",\"ibm_audit_target.repositoryId\",\"ibm_audit_target.realm\",\"ibm_audit_target.appname\",\"ibm_audit_initiator.host.address\",\"ibm_sequence\"],\"sort\":[\"ibm_sequence\",\"desc\"]},\"gridData\":{\"x\":0,\"y\":55,\"w\":48,\"h\":30,\"i\":\"11\"},\"version\":\"6.8.0\"}]",
