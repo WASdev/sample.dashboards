@@ -1,0 +1,192 @@
+<form theme="dark">
+  <label>Liberty Problems dashboard</label>
+  <description>Dashboard visualizes message, trace and FFDC information for Liberty servers. Use this dashboard to look for errors, warnings and other problems.</description>
+  <fieldset submitButton="false">
+    <input type="time" token="timeSearch">
+      <label>Filter Time</label>
+      <default>
+        <earliest>0</earliest>
+        <latest></latest>
+      </default>
+    </input>
+  </fieldset>
+    <row>
+    <panel>
+      <title>Namespaces (Problems)</title>
+      <table>
+        <title>Namespaces</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search kubernetes.namespace_name=* AND type=liberty_message OR type=liberty_trace OR type=liberty_ffdc | top limit=20 kubernetes.namespace_name</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <fields>["kubernetes.namespace_name", "count"]</fields>
+      </table>
+    </panel>
+    <panel>
+      <title>Pods (Problems)</title>
+      <table>
+        <title>Pods</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search kubernetes.pod_name=* AND type=liberty_message OR type=liberty_trace OR type=liberty_ffdc | top limit=20 kubernetes.pod_name</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <fields>["kubernetes.pod_name", "count"]</fields>
+      </table>
+    </panel>
+    <panel>
+      <title>Containers (Problems)</title>
+      <table>
+        <title>Containers</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search kubernetes.container_name=* AND type=liberty_message OR type=liberty_trace OR type=liberty_ffdc | top limit=20 kubernetes.container_name</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <fields>["kubernetes.container_name", "count"]</fields>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Liberty Top Message IDs</title>
+      <chart>
+        <title>Liberty Top Message IDs</title>
+        <search>
+          <query>index="openshift"    | rename line.* as *| search ibm_messageId=* | timechart count by ibm_messageId limit=10</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.chart">column</option>
+        <option name="charting.chart.showDataLabels">minmax</option>
+        <option name="charting.chart.stackMode">stacked</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="height">183</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Liberty Messages</title>
+      <chart>
+        <title>Liberty Messages</title>
+        <search>
+          <query>index="openshift"   | rename line.* as *| search type=liberty_message | timechart count by loglevel limit=10</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>Liberty Trace</title>
+      <chart>
+        <title>Liberty Trace</title>
+        <search>
+          <query>index="openshift"   | rename line.* as * | search type=liberty_trace | timechart count by loglevel limit=10</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>Liberty FFDC</title>
+      <chart>
+        <title>Liberty FFDC</title>
+        <search>
+          <query>index="openshift"   | rename line.* as * | search type=liberty_ffdc | timechart count by loglevel limit=10</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Liberty Messages Search</title>
+      <table>
+        <title>Liberty Messages Search</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search type=liberty_message AND loglevel=* AND module=* AND message=* AND ibm_sequence=*</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">row</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <fields>["_time","loglevel","module","message","ibm_sequence"]</fields>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Liberty Trace Search</title>
+      <table>
+        <title>Liberty Trace Search</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search type=liberty_trace AND loglevel=* AND module=* AND message=* AND ibm_sequence=*</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">row</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <fields>["_time","loglevel","module","message","ibm_sequence"]</fields>
+      </table>
+    </panel>
+  </row>
+    <row>
+    <panel>
+      <title>Liberty FFDC Search</title>
+      <table>
+        <title>Liberty FFDC Search</title>
+        <search>
+          <query>index="openshift" | rename line.* as * | search type=liberty_ffdc AND ibm_className=* AND ibm_probeID=* AND ibm_exceptionName=* AND ibm_sequence=*</query>
+          <earliest>$timeSearch.earliest$</earliest>
+          <latest>$timeSearch.latest$</latest>
+        </search>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">row</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <fields>["_time","ibm_className","ibm_probeID","ibm_exceptionName","ibm_sequence"]</fields>
+      </table>
+    </panel>
+  </row>
+</form>
